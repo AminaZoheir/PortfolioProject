@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="portfolio">
+	<div ng-controller="PortfolioCtrl">
+		<div class="row" ng-hide="currCat">
+			<div ng-repeat="cat in categories" class="span4">
+				<img ng-src="images/{{cat.image}}" ng-click="chooseCat(cat)">
+				<span>{{cat.name}}</span>
+			</div>
+		</div>
+		<div ng-hide="currProj">
+			<div ng-show="currCat">
+				<div ng-repeat="proj in projects">
+					<img ng-src="">
+					<span ng-click="chooseProj(proj)">{{proj.name}}</span>
+				</div>
+			</div>
+		</div>
+		<div ng-show="currProj">
+			<img ng-src="">
+			<span>{{currProj.name}}</span>
+		</div>
+	</div>
+</body>
+</html>
