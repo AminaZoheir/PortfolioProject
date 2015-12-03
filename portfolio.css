@@ -1,0 +1,78 @@
+.nav, .pagination, .carousel, .panel-title a {
+ 	cursor: pointer;
+ }
+
+body{
+	background-color: rgb(10, 10, 10);
+}
+
+.navbar{
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	color: rgb(255, 255, 255);
+	margin-bottom: 0px;
+	font-weight: bold;
+	z-index: 5;
+}
+
+.navbar-nav{
+	padding: 10px;
+}
+
+.navbar-nav > li{
+	border-left: 0.5px solid rgba(245,245,245, 0.5);
+}
+
+.navbar-default .navbar-nav > li > a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: rgb(250, 250, 250);
+    text-shadow: 0 0 3px black;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: rgb(200, 200, 200);
+}
+
+ .fill-parent > .carousel-inner{
+	width: 100%;
+	height: 100%;
+}
+
+#home-carousel{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.fill-parent > .carousel-inner > .item > img{
+	height: 100%;
+	width: 100%;
+}
+
+.fill-parent {
+	height: 100%;
+	width: 100%;
+}
+
+#home-title{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	padding: 10%;
+	color: rgb(250, 250, 250);
+	text-shadow: 0 0 3px black;
+}
+
+#home-title > h1{
+	font-size: 70px;
+}
+
+#home-title > span{
+	font-size: 20px;
+}

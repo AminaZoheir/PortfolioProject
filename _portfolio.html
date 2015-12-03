@@ -1,0 +1,33 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" ng-repeat="cat in categories">
+					<a>{{cat.name}}</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-10">
+			
+		</div>
+			<!-- <div ng-hide="currCat">
+				<div ng-repeat="cat in categories">
+					 <img ng-src="images/{{cat.image}}" ng-click="chooseCat(cat)"> 
+					<span>{{cat.name}}</span>
+				</div>
+			</div>
+			<div ng-hide="currProj">
+				<div ng-show="currCat">
+					<div ng-repeat="proj in projects">
+						<img ng-src="">
+						<span ng-click="chooseProj(proj)">{{proj.name}}</span>
+					</div>
+				</div>
+			</div>
+			<div ng-show="currProj">
+				<img ng-src="">
+				<span>{{currProj.name}}</span>
+			</div> -->
+		
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<div ng-controller="CarouselDemoCtrl" id="home-carousel">
+  <div class="fill-parent">
+    <uib-carousel interval="myInterval" class="fill-parent">
+      <uib-slide ng-repeat="slide in slides" active="slide.active" class="fill-parent">
+        <img ng-src="{{slide.image}}" class="fill-parent">
+      </uib-slide>
+    </uib-carousel>
+  </div>
+</div>
+
+
+
+<div id="home-title">
+	<h1>Name</h1>
+	<span>mini desc</span>
+</div>

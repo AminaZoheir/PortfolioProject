@@ -1,4 +1,19 @@
-var mod = angular.module('portfolio',[]);
+var mod = angular.module('portfolio',['ui.router', 'ui.bootstrap', 'ngAnimate']);
+
+mod.config(['$stateProvider', '$urlRouterProvider',
+	function($stateProvider, $urlRouterProvider){
+		$stateProvider.state('home', {
+			url:'/home',
+			templateUrl: '_home.html'
+		})
+		.state('portfolio', {
+			url: '/portfolio',
+			templateUrl: '_portfolio.html',
+			controller: 'PortfolioCtrl'
+		})
+
+		$urlRouterProvider.otherwise('/home');
+	}])
 
 mod.controller('PortfolioCtrl', ['$scope',  
 	function($scope){
@@ -19,3 +34,9 @@ mod.controller('PortfolioCtrl', ['$scope',
 			$scope.currProj = proj;
 		}
 }]);
+
+angular.module('portfolio').controller('CarouselDemoCtrl', function ($scope) {
+  $scope.myInterval = 4000;
+  $scope.noWrapSlides = false;
+  var slides = $scope.slides = [{image: 'images/1.jpeg'},{image: 'images/2.jpeg'},{image: 'images/3.jpeg'}];
+});
