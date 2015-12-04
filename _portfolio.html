@@ -15,12 +15,12 @@
 			</div>
 			<div class="col-md-10 port-grid">
 				<div class="col-md-3 proj-animate" ng-repeat="proj in projects">
-					<div class="projComp">
+					<a href="#/project/{{proj.id}}" class="projComp">
 			      <img src="{{proj.image}}" class="projImage" ng-click="chooseProj(proj)"/>
 						<div class="projInfo">
 							<span>{{proj.name}}</span>
 						</div>
-					</div>
+					</a>
 			  </div>
 			</div>
 		</div>

@@ -8,17 +8,18 @@ angular.module('portfolio').factory('projects',[function(){
 		{id: 3, name: "Al Madina Road", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/04-Al Madina Road, arch, complex.jpg"}], image: "images/homeProjects/04-Al Madina Road, arch, complex.jpg"},
 		{id: 4, name: "Al Tamieez", desc: "", category: "Architecture", subcategory: "Hotels", images:[{image:"images/homeProjects/05-Al Tamieez, arch, hotels.jpg"}], image: "images/homeProjects/05-Al Tamieez, arch, hotels.jpg"},
 		{id: 5, name: "Al Aqeela", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/06-Al Aqeela, arch, complex.jpg"}], image: "images/homeProjects/06-Al Aqeela, arch, complex.jpg"},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
-		// {name:, desc:, category:, subcategory:, images:[]},
+		{id: 6, name: "Al Sabban", desc: "", category: "Architecture", subcategory: "Admin", images:[{image:"images/homeProjects/07-Al Sabban, arch, admin.jpg"}], image: "images/homeProjects/07-Al Sabban, arch, admin.jpg"},
+		{id: 7, name: "Siag", desc: "", category: "Architecture", subcategory: "Hotels", images:[{image:"images/homeProjects/08-Siag, arch, hotels.jpg"}], image: "images/homeProjects/08-Siag, arch, hotels.jpg"},
+		{id: 8, name: "Maria Heights", desc: "", category: "Architecture", subcategory: "Residential Compounds", images:[{image:"images/homeProjects/09 Maria Heights, arch, res compounds.jpg"}], image: "images/homeProjects/09 Maria Heights, arch, res compounds.jpg"},
+		{id: 9, name: "Al Qurashi", desc: "", category: "Architecture", subcategory: "Admin", images:[{image:"images/homeProjects/10 Al Qurashi, arch, admin.jpg"}], image: "images/homeProjects/10 Al Qurashi, arch, admin.jpg"},
+		{id: 10, name: "Chair", desc: "", category: "Architecture", subcategory: "Hotels", images:[{image:"images/homeProjects/11 Chair, arch, hotels.jpg"}], image: "images/homeProjects/11 Chair, arch, hotels.jpg"},
+		{id: 11, name: "Olympic Plaza", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/12 Olympic Plaza, arch, complex.jpg"}], image: "images/homeProjects/12 Olympic Plaza, arch, complex.jpg"},
+		{id: 12, name: "Ocean Blue Showroom", desc: "", category: "Architecture", subcategory: "Retail", images:[{image:"images/homeProjects/13 Ocean Blue Showroom, arch, retail.jpg"}], image: "images/homeProjects/13 Ocean Blue Showroom, arch, retail.jpg"},
+		{id: 13, name: "Tukur Road", desc: "", category: "Interior", subcategory: "Residential Private", images:[{image:"images/homeProjects/14 Tukur Road, interior, res, private.jpg"}], image: "images/homeProjects/14 Tukur Road, interior, res, private.jpg"},
+		{id: 14, name: "Aywaa Hotel", desc: "", category: "Architecture", subcategory: "Hotels", images:[{image:"images/homeProjects/15 Aywaa hotel, arch, hotels.jpg"}], image: "images/homeProjects/15 Aywaa hotel, arch, hotels.jpg"},
+		{id: 15, name: "Q Hotel", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/16 Q hotel, arch, hotels.jpg"}], image: "images/homeProjects/16 Q hotel, arch, hotels.jpg"},
+		{id: 16, name: "Boutique Hotel", desc: "", category: "Architecture", subcategory: "Hotels", images:[{image:"images/homeProjects/18 Boutique hotel, arch, hotels.jpg"}], image: "images/homeProjects/18 Boutique hotel, arch, hotels.jpg"},
+		{id: 17, name: "Madinah Road", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/22 Madinah Road , arch, complex.jpg"}], image: "images/homeProjects/22 Madinah Road , arch, complex.jpg"},
 		{id: 18, name: "Vila Al Zubairy", desc: "" , category: "Architecture", subcategory: "Hotels", images:["images/homeProjects/19 Vila Al Zubairy, arhc, hotels.jpg"], image: "images/homeProjects/19 Vila Al Zubairy, arhc, hotels.jpg"}]
 	};
 	return o;
@@ -89,7 +90,7 @@ angular.module('portfolio').controller('ProjectCtrl', ['$scope', '$stateParams',
 
 
 angular.module('portfolio').controller('CarouselDemoCtrl', ['$scope', 'projects', function ($scope, projects) {
-  $scope.myInterval = 4000;
+  $scope.myInterval = 2000;
   $scope.noWrapSlides = false;
   var slides = $scope.slides = projects.projects;
 }]);
