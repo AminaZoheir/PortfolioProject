@@ -3,14 +3,11 @@
     <uib-carousel interval="myInterval" class="fill-parent">
       <uib-slide ng-repeat="slide in slides" active="slide.active" class="fill-parent">
         <img ng-src="{{slide.image}}" class="fill-parent">
+        <div class="carousel-caption">
+          <h4>{{slide.name}}</h4>
+          <a href="#/project/{{slide.id}}" class="project-button">View Project</a>
+        </div>
       </uib-slide>
     </uib-carousel>
   </div>
-</div>
-
-
-
-<div id="home-title">
-	<h1>Name</h1>
-	<span>mini desc</span>
 </div>

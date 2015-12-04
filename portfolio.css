@@ -6,6 +6,10 @@ body{
 	background-color: rgb(10, 10, 10);
 }
 
+.logo{
+	width: 80px;
+}
+
 .navbar{
 	background-color: rgba(0, 0, 0, 0);
 	border: none;
@@ -13,6 +17,8 @@ body{
 	margin-bottom: 0px;
 	font-weight: bold;
 	z-index: 5;
+	border-radius: 0px;
+	/*border-bottom: 0.5px solid rgba(245, 245, 245, 0.5);*/
 }
 
 .navbar-nav{
@@ -34,6 +40,10 @@ body{
     color: rgb(200, 200, 200);
 }
 
+.navbar-default .navbar-nav > li > a:focus{
+    color: rgb(200, 200, 200);
+}
+
  .fill-parent > .carousel-inner{
 	width: 100%;
 	height: 100%;
@@ -47,6 +57,22 @@ body{
 	width: 100%;
 }
 
+.carousel-caption{
+	height: 65%;
+	
+}
+
+.carousel-caption > h4{
+	font-size: 70px;
+	color: rgb(250, 250, 250);
+	text-shadow: 0 0 4px black;
+	margin-bottom: 3%;
+}
+
+.carousel-control{
+	z-index: 3;
+}
+
 .fill-parent > .carousel-inner > .item > img{
 	height: 100%;
 	width: 100%;
@@ -57,22 +83,80 @@ body{
 	width: 100%;
 }
 
-#home-title{
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-	padding: 10%;
+.project-button{
+	padding: 2%;
+	background-color: transparent;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 17px;
+	color: rgb(250, 250, 250);
+	text-shadow: 0 0 4px black;
+	font-weight: bold;
+	box-shadow: 0px 0px 5px black;
+}
+
+.project-button:hover{
+	color: rgb(200, 200, 200);
+	text-decoration: none;
+}
+
+.project-button:focus{
+	color: rgb(200, 200, 200);
+	text-decoration: none;
+}
+
+.proj-desc > h1{
+	font-size: 18px;
+	color: rgb(250, 250, 250);
+	text-shadow: 0 0 3px black;
+	font-weight: bold;
+}
+
+.proj-desc{
+	margin-top: 2%;
+}
+
+.name-proj{
+	font-size: 18px;
 	color: rgb(250, 250, 250);
 	text-shadow: 0 0 3px black;
 }
 
-#home-title > h1{
-	font-size: 70px;
+
+#project-carousel{
+	margin-top: 2%;
 }
 
-#home-title > span{
-	font-size: 20px;
+.project-icon{
+	width: 50px;
+	height: 50px;
+}
+
+.project-icon:hover{
+	cursor: pointer;
+}
+
+.carousel-icons{
+	padding-top: 1%;
+}
+
+#projectpage{
+	margin-top: 3%;
+}
+
+#project-carousel{
+
+}
+
+.category-proj{
+    color: rgb(255, 218, 0);
+    padding-right: 2%;
+}
+
+.sub-proj{
+	padding-left: 1%;
+	border-left: 2px solid #FAFAFA;
 }

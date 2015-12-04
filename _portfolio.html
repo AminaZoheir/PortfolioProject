@@ -11,6 +11,9 @@
 			<div class="col-md-8">
 				Amina
 			</div>
+			<div ng-repeat="proj in projects">
+				<a href="#/project/{{$index}}"> {{proj.name}}</a>
+			</div>
 		</div>
 			<!-- <div ng-hide="currCat">
 				<div ng-repeat="cat in categories">
