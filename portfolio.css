@@ -182,7 +182,7 @@ body{
 }
 
 .projImage{
-  max-height: 200px;
+  max-height: 120px;
   opacity: 1;
   color:white;
 }
@@ -193,20 +193,19 @@ body{
 }
 
 .proj-animate.ng-enter.ng-enter-active, .proj-animate.ng-leave {
-  opacity:0;
-}
-
-.proj-animate.ng-leave.ng-leave-active, .proj-animate.ng-enter{
   opacity:1;
 }
 
+.proj-animate.ng-leave.ng-leave-active, .proj-animate.ng-enter{
+  opacity:0;
+}
+
 .proj-animate{
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .projComp{
   display: inline-block;
-  padding: 2% 2% 0% 2%;
   background: white;
   position: relative;
 }
@@ -218,14 +217,36 @@ body{
   height: 20%;
   width:100%;
   color:white;
-  background-color: red;
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-weight: bold;
 }
 
 .projImage:hover{
   /*height: 30%;*/
   /*-webkit-transition:all linear 0.25s;
   transition:all linear 0.25s;*/
+}
+
+.port-cat{
+	margin-top:35%;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgb(250,250,250);
+}
+
+.port-grid{
+	border-left: 1px solid #FAFAFA;
+	margin-top: 3%;
+}
+
+ul{
+
+	list-style-type: none;
+}
+
+.yellow-hover:hover{
+	color: rgb(255, 218, 0);
 }
 
 .sub-proj{

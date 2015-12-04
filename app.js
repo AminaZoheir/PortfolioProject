@@ -19,7 +19,7 @@ angular.module('portfolio').factory('projects',[function(){
 		// {name:, desc:, category:, subcategory:, images:[]},
 		// {name:, desc:, category:, subcategory:, images:[]},
 		// {name:, desc:, category:, subcategory:, images:[]},
-		{id: 18, name: "Vila Al Zubairy", desc: "" , category: "Architecture", subcategory: "Hotels", images:["images/homeProjects/19 Vila Al Zubairy, arch, hotels.jpg"], image: "images/homeProjects/19 Vila Al Zubairy, arhc, hotels.jpg"}]
+		{id: 18, name: "Vila Al Zubairy", desc: "" , category: "Architecture", subcategory: "Hotels", images:["images/homeProjects/19 Vila Al Zubairy, arhc, hotels.jpg"], image: "images/homeProjects/19 Vila Al Zubairy, arhc, hotels.jpg"}]
 	};
 	return o;
 }]);
@@ -29,7 +29,6 @@ mod.config(['$stateProvider', '$urlRouterProvider',
 		$stateProvider.state('home', {
 			url:'/home',
 			templateUrl: '_home.html'
-			// controller: 'HomeCtrl'
 		})
 		.state('portfolio', {
 			url: '/portfolio',
