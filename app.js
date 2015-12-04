@@ -47,12 +47,11 @@ mod.config(['$stateProvider', '$urlRouterProvider',
 
 mod.controller('PortfolioCtrl', ['$scope','projects',
 	function($scope,projects){
-		$scope.categories = {"Architecture":{name:"Architecture", image:"architecture.png", subCats:[{name:"archSub1", image:""},
-																						{name:"archSub2", image:""}]},
-							"Urban":{name:"Urban", image:"architecture.png", subCats:[{name:"urbSub1", image:""},
-																						{name:"urbSub2", image:""}]},
-							"Interior":{name:"Interior", image:"architecture.png", subCats:[{name:"IntSub1", image:""},
-																						{name:"IntSub2", image:""}]}};
+		$scope.categories = {"Architecture":{name:"Architecture", image:"architecture.png", subCats:[{name:"Complexes", image:""},
+																						{name:"Hotels", image:""},{name:"Residential Buildings", image:""},{name:"Residential Compounds", image:""},
+																					   {name:"Admin", image:""},{name:"Retail", image:""}]},
+							"Urban":{name:"Urban", image:"architecture.png", subCats:[]},
+							"Interior":{name:"Interior", image:"architecture.png", subCats:[{name:"Residential Private", image:""}]}};
 
 
 		$scope.subCats = {"Architecture":[],
@@ -70,6 +69,13 @@ mod.controller('PortfolioCtrl', ['$scope','projects',
 			// console.log($scope.subCats[cat.name]);
 			$scope.projects = $scope.projectsOriginal.filter(function(proj){
 				return proj.category == cat.name;
+			});
+		}
+
+		$scope.chooseSubCat = function(subCat){
+			$scope.currSubCat = subCat.name
+			$scope.projects = $scope.projectsOriginal.filter(function(proj){
+				return proj.subcategory == subCat.name;
 			});
 		}
 
