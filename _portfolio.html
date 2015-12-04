@@ -1,38 +1,28 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-10">
+		<div class="col-md-12">
 			<div class="col-md-2">
-				<ul class="nav nav-pills nav-stacked">
+				<ul class="nav-stacked">
 					<li role="presentation" ng-repeat="cat in categories">
-						<a>{{cat.name}}</a>
+						<span class="parentCat" ng-click="chooseCat(cat)">{{cat.name}}</span>
+						<ul class="nav-stacked">
+							<li class="animate-repeat" ng-repeat="subCat in subCats[cat.name]">
+								<span href="">{{subCat.name}}</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</div>
-			<div class="col-md-8">
-				Amina
-			</div>
-			<div ng-repeat="proj in projects">
-				<a href="#/project/{{$index}}"> {{proj.name}}</a>
+			<div class="col-md-10">
+				<div class="col-md-4 proj-animate" ng-repeat="proj in projects">
+					<div class="projComp">
+			      <img src="images/proj{{$index+1}}.jpg" class="projImage" ng-click="chooseProj(proj)"/>
+						<div class="projInfo">
+							<span>{{proj.name}}</span>
+						</div>
+					</div>
+			  </div>
 			</div>
 		</div>
-			<!-- <div ng-hide="currCat">
-				<div ng-repeat="cat in categories">
-					 <img ng-src="images/{{cat.image}}" ng-click="chooseCat(cat)"> 
-					<span>{{cat.name}}</span>
-				</div>
-			</div>
-			<div ng-hide="currProj">
-				<div ng-show="currCat">
-					<div ng-repeat="proj in projects">
-						<img ng-src="">
-						<span ng-click="chooseProj(proj)">{{proj.name}}</span>
-					</div>
-				</div>
-			</div>
-			<div ng-show="currProj">
-				<img ng-src="">
-				<span>{{currProj.name}}</span>
-			</div> -->
-		
 	</div>
 </div>

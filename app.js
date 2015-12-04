@@ -45,17 +45,31 @@ mod.config(['$stateProvider', '$urlRouterProvider',
 		$urlRouterProvider.otherwise('/home');
 	}])
 
-angular.module('portfolio').controller('PortfolioCtrl', 
-	['$scope', 'projects',
-	function($scope, projects){
-		$scope.categories = [{name:"Architecture", image:"architecture.png"}, 
-							{name:"Urban", image:"architecture.png"}, 
-							{name:"Interior", image:"architecture.png"}];
-		$scope.projects = projects.projects;
+mod.controller('PortfolioCtrl', ['$scope','projects',
+	function($scope,projects){
+		$scope.categories = {"Architecture":{name:"Architecture", image:"architecture.png", subCats:[{name:"archSub1", image:""},
+																						{name:"archSub2", image:""}]},
+							"Urban":{name:"Urban", image:"architecture.png", subCats:[{name:"urbSub1", image:""},
+																						{name:"urbSub2", image:""}]},
+							"Interior":{name:"Interior", image:"architecture.png", subCats:[{name:"IntSub1", image:""},
+																						{name:"IntSub2", image:""}]}};
+
+
+		$scope.subCats = {"Architecture":[],
+							"Urban":[],
+							"Interior":[]};
+
+		$scope.projectsOriginal = projects.projects;
+
+		$scope.projects = $scope.projectsOriginal
+
 		$scope.chooseCat = function(cat){
+			$scope.subCats[$scope.currCat] = []
 			$scope.currCat = cat.name;
-			$scope.projects = $scope.projects.filter(function(proj){
-				return proj.category.name == cat.name;
+			$scope.subCats[cat.name] = $scope.categories[cat.name].subCats;
+			// console.log($scope.subCats[cat.name]);
+			$scope.projects = $scope.projectsOriginal.filter(function(proj){
+				return proj.category == cat.name;
 			});
 		}
 
@@ -65,7 +79,7 @@ angular.module('portfolio').controller('PortfolioCtrl',
 }]);
 
 angular.module('portfolio').controller('ProjectCtrl', ['$scope', '$stateParams',
-	'projects', 
+	'projects',
 	function($scope, $stateParams, projects){
 	$scope.project = projects.projects[$stateParams.id];
 	$scope.photos = $scope.project.images;
