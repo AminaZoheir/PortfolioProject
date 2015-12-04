@@ -15,17 +15,35 @@ mod.config(['$stateProvider', '$urlRouterProvider',
 		$urlRouterProvider.otherwise('/home');
 	}])
 
-mod.controller('PortfolioCtrl', ['$scope',  
+mod.controller('PortfolioCtrl', ['$scope',
 	function($scope){
-		$scope.categories = [{name:"Architecture", image:"architecture.png"}, 
-							{name:"Urban", image:"architecture.png"}, 
-							{name:"Interior", image:"architecture.png"}];
-		$scope.projects = [{name: "project1", desc: "bla bla", category:$scope.categories[1], images:["", "", ""]},
-							{name: "project2", desc: "bla bla", category:$scope.categories[2], images:["", "", ""]},
-							{name: "project3", desc: "bla bla", category:$scope.categories[2], images:["", "", ""]}];
+		$scope.categories = {"Architecture":{name:"Architecture", image:"architecture.png", subCats:[{name:"archSub1", image:""},
+																						{name:"archSub2", image:""}]},
+							"Urban":{name:"Urban", image:"architecture.png", subCats:[{name:"urbSub1", image:""},
+																						{name:"urbSub2", image:""}]},
+							"Interior":{name:"Interior", image:"architecture.png", subCats:[{name:"IntSub1", image:""},
+																						{name:"IntSub2", image:""}]}};
+
+
+		$scope.subCats = {"Architecture":[],
+							"Urban":[],
+							"Interior":[]};
+
+		$scope.projectsOriginal = [{name: "project1", desc: "bla bla", category:$scope.categories["Urban"], images:["", "", ""]},
+							{name: "project2", desc: "bla bla", category:$scope.categories["Interior"], images:["", "", ""]},
+							{name: "project3", desc: "bla bla", category:$scope.categories["Interior"], images:["", "", ""]},
+							{name: "project1", desc: "bla bla", category:$scope.categories["Urban"], images:["", "", ""]},
+							{name: "project2", desc: "bla bla", category:$scope.categories["Interior"], images:["", "", ""]},
+							{name: "project3", desc: "bla bla", category:$scope.categories["Interior"], images:["", "", ""]}];
+
+		$scope.projects = $scope.projectsOriginal
+
 		$scope.chooseCat = function(cat){
+			$scope.subCats[$scope.currCat] = []
 			$scope.currCat = cat.name;
-			$scope.projects = $scope.projects.filter(function(proj){
+			$scope.subCats[cat.name] = $scope.categories[cat.name].subCats;
+			// console.log($scope.subCats[cat.name]);
+			$scope.projects = $scope.projectsOriginal.filter(function(proj){
 				return proj.category.name == cat.name;
 			});
 		}
