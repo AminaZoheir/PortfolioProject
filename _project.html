@@ -9,6 +9,11 @@
 					<span class="sub-proj">{{project.subcategory| uppercase}}</span>
 				</h1>
 				<h3 class="name-proj">{{project.name}}</h3>
+				<div class="carousel-icons">
+					<span ng-repeat="image in project.images">
+						<img ng-src="{{image.image}}" class="project-icon" ng-click="setActive(image)">
+					</span>
+				</div>
 				<p>
 					{{project.desc}}
 				</p>
@@ -22,11 +27,6 @@
 				      </uib-slide>
 				    </uib-carousel>
 				  </div>
-				</div>
-				<div class="carousel-icons">
-					<span ng-repeat="image in project.images">
-						<img ng-src="{{image.image}}" class="project-icon" ng-click="setActive(image)">
-					</span>
 				</div>
 			</div>
 

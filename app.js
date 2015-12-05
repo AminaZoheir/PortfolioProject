@@ -66,8 +66,8 @@ mod.controller('PortfolioCtrl', ['$scope','projects',
 			$scope.subCats[$scope.currCat] = []
 			$scope.currCat = cat.name;
 			$scope.subCats[cat.name] = $scope.categories[cat.name].subCats;
-			$scope.currSubCat = null;
 			// console.log($scope.subCats[cat.name]);
+			$scope.currSubCat = "";
 			$scope.projects = $scope.projectsOriginal.filter(function(proj){
 				return proj.category == cat.name;
 			});

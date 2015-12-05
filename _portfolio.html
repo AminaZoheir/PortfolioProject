@@ -6,7 +6,7 @@
 					<li role="presentation" ng-repeat="cat in categories">
 						<span ng-class="{'selected':cat.name == currCat}" class="parentCat yellow-hover" ng-click="chooseCat(cat)">{{cat.name | uppercase}}</span>
 						<ul class="nav-stacked">
-							<li class="animate-repeat" ng-repeat="subCat in subCats[cat.name]">
+							<li class="animate-repeat sub-cat" ng-repeat="subCat in subCats[cat.name]">
 								<span ng-class="{'selected':subCat.name == currSubCat}" class="yellow-hover"href="" ng-click=chooseSubCat(subCat)>{{subCat.name | uppercase}}</span>
 							</li>
 						</ul>
