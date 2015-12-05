@@ -4,7 +4,7 @@ angular.module('portfolio').factory('projects',[function(){
 	var o = {
 		projects: [{id: 0, name: "Binbaz", desc: "", category: "Architecture", subcategory: "Residential Buildings", images: [{image:"images/homeProjects/1-Binbaz, arch, res building.jpg"}, {image:"images/homeProjects/02-Laleh Tower, arch, complex.jpg"},{image: "images/homeProjects/3-Hayel, arch, Complex.jpg"}], image: "images/homeProjects/1-Binbaz, arch, res building.jpg"},
 		{id: 1, name: "Laleh Tower", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/02-Laleh Tower, arch, complex.jpg"}], image: "images/homeProjects/02-Laleh Tower, arch, complex.jpg"},
-		{id: 2, name: "Hayel", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/3-Hayel, arch, Complex.jpg"}], image: "images/homeProjects/3-Hayel, arch, Complex.jpg"},
+		{id: 2, name: "Hayel", desc: "The project emerges from a simple idea that presents the architecture heriyage of Jeddah in a vision of today serving tomorrow. The way the building acts as a phenomenal authentic modern icon that provides a new and condensed image affecting both vision and how the building is viewed. The site location has become a lively destination as it lies in the central region of jeddah.", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/3-Hayel, arch, Complex.jpg"}, {image:"images/homeProjects/02-Laleh Tower, arch, complex.jpg"}, {image:"images/homeProjects/08-Siag, arch, hotels.jpg"}], image: "images/homeProjects/3-Hayel, arch, Complex.jpg"},
 		{id: 3, name: "Al Madina Road", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/04-Al Madina Road, arch, complex.jpg"}], image: "images/homeProjects/04-Al Madina Road, arch, complex.jpg"},
 		{id: 4, name: "Al Tamieez", desc: "", category: "Architecture", subcategory: "Hotels", images:[{image:"images/homeProjects/05-Al Tamieez, arch, hotels.jpg"}], image: "images/homeProjects/05-Al Tamieez, arch, hotels.jpg"},
 		{id: 5, name: "Al Aqeela", desc: "", category: "Architecture", subcategory: "Complexes", images:[{image:"images/homeProjects/06-Al Aqeela, arch, complex.jpg"}], image: "images/homeProjects/06-Al Aqeela, arch, complex.jpg"},
@@ -66,6 +66,7 @@ mod.controller('PortfolioCtrl', ['$scope','projects',
 			$scope.subCats[$scope.currCat] = []
 			$scope.currCat = cat.name;
 			$scope.subCats[cat.name] = $scope.categories[cat.name].subCats;
+			$scope.currSubCat = null;
 			// console.log($scope.subCats[cat.name]);
 			$scope.projects = $scope.projectsOriginal.filter(function(proj){
 				return proj.category == cat.name;
@@ -96,7 +97,7 @@ angular.module('portfolio').controller('ProjectCtrl', ['$scope', '$stateParams',
 
 
 angular.module('portfolio').controller('CarouselDemoCtrl', ['$scope', 'projects', function ($scope, projects) {
-  $scope.myInterval = 2000;
+  $scope.myInterval = 4000;
   $scope.noWrapSlides = false;
   var slides = $scope.slides = projects.projects;
 }]);
