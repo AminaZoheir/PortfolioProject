@@ -257,3 +257,8 @@ ul{
 .selected{
   color: rgb(255, 218, 0);
 }
+
+.yellow-hover,
+.parentCat{
+  cursor:pointer;
+}
